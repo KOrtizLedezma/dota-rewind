@@ -1,0 +1,54 @@
+# --- Node / pnpm ---
+**/node_modules/
+.pnpm-debug.log*
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+
+# --- TypeScript ---
+**/*.tsbuildinfo
+
+# --- Build outputs / caches ---
+**/dist/
+**/build/
+**/.next/
+**/.next/cache/
+**/.turbo/
+**/.cache/
+out/
+
+# --- Tests / Coverage ---
+coverage/
+**/coverage/
+.eslintcache
+
+# --- Env files ---
+.env
+.env.*
+**/.env
+**/.env.*
+!/.env.example
+!**/.env.example
+
+# --- Editor / OS junk ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# --- Docker/dev data ---
+infra/**/data/
+infra/**/db-data/
+infra/**/postgres-data/
+dump.rdb
+
+# --- Hosting platform folders ---
+.vercel/
+.netlify/
+
+# --- Logs ---
+logs/
+*.log
