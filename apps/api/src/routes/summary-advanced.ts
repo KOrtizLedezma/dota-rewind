@@ -45,14 +45,14 @@ type RangeKey = "last_month" | "last_6_months" | "last_year";
 type QueueKey = "all" | "turbo" | "ranked" | "normal";
 
 /**
- * GET /v1/players/:steamid64/summary-advanced
+ * GET /v1/player/:steamid64/summary-advanced
  * Query:
  *   - range: last_month | last_6_months | last_year
  *   - queue: all | turbo | ranked | normal
  *   - deepLimit: number (0..300)
  *   - parse: 0 | 1    (optional) request parse for matches that lack details
  */
-router.get("/players/:steamid64/summary-advanced", async (req, res, next) => {
+router.get("/:steamid64/summary-advanced", async (req, res, next) => {
   try {
     const q = z
       .object({
